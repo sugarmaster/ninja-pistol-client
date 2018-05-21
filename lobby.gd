@@ -40,6 +40,8 @@ func _process(delta):
 			set_process(false)
 			player_udp.close()
 			gamestate.host_game($connect/name.text)
+			gamestate.begin_game()
+			
 	elif (joining): # is joining
 		joining_countdown += delta
 		if(joining_countdown > 3.0):
